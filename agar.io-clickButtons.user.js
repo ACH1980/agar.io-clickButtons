@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Agar.io Click Buttons
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  Click blue potion buttons automatically!
 // @author       KanjiasDev
 // @match        https://agar.io/
@@ -13,12 +13,8 @@
 (function() {
     'use strict';
 
-    var x = 0;
-
-    function testing() {
+    function clickButtons() {
         if (!window.core) return;
-
-        console.log(core);
 
         var blueButtons = document.getElementsByClassName("potion-slot-button blue");
         if (blueButtons[0]) {
@@ -26,5 +22,5 @@
         }
     }
 
-    setInterval(testing, 10000);
+    setInterval(clickButtons, 10000);
 })();
